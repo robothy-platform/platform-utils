@@ -1,0 +1,9 @@
+plugins {
+    id 'robothy-platform'
+}
+
+dependencies {
+    platform implementation ('com.robothy:platform-thirdparty-dependencies:2022.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter-api'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+}
