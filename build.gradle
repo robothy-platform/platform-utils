@@ -6,4 +6,7 @@ dependencies {
     platform implementation ('com.robothy:platform-thirdparty-dependencies:2022.1')
     testImplementation 'org.junit.jupiter:junit-jupiter-api'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+    implementation "com.fasterxml.jackson.core:jackson-databind"
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
 }
