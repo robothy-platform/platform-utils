@@ -3,6 +3,7 @@ plugins {
 }
 
 dependencies {
+    platform implementation ('com.robothy:platform-thirdparty-dependencies:2022.1')
     platform compileClasspath ('com.robothy:platform-thirdparty-dependencies:2022.1')
     platform annotationProcessor ('com.robothy:platform-thirdparty-dependencies:2022.1')
     testImplementation 'org.junit.jupiter:junit-jupiter-api'
