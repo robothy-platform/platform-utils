@@ -1,14 +1,33 @@
 plugins {
     id 'robothy-platform'
+    id "com.dorongold.task-tree" version "2.1.0"
 }
 
 dependencies {
-    platform implementation ('com.robothy:platform-thirdparty-dependencies:2022.1')
-    platform compileClasspath ('com.robothy:platform-thirdparty-dependencies:2022.1')
-    platform annotationProcessor ('com.robothy:platform-thirdparty-dependencies:2022.1')
-    testImplementation 'org.junit.jupiter:junit-jupiter-api'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
-    implementation "com.fasterxml.jackson.core:jackson-databind"
+    platform bom("com.robothy:platform-thirdparty-dependencies:${libVersions['com.robothy.platform-thirdparty-dependencies']}")
+    implementation (
+            "com.fasterxml.jackson.core:jackson-databind",
+            'org.apache.commons:commons-lang3'
+    )
+
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
+
+    testImplementation (
+            'org.junit.jupiter:junit-jupiter-api',
+            "org.junit.jupiter:junit-jupiter-params",
+    )
+
+    testCompileOnly(
+            "org.projectlombok:lombok"
+    )
+
+    testRuntimeOnly (
+            'org.junit.jupiter:junit-jupiter-engine'
+    )
+
+    testAnnotationProcessor(
+            "org.projectlombok:lombok"
+    )
+
 }
