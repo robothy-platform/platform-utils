@@ -1,6 +1,8 @@
 plugins {
     id 'robothy-platform'
-    id "com.dorongold.task-tree" version "2.1.0"
+    //id "com.dorongold.task-tree" version "2.1.0"
+    // kotlin
+    id 'org.jetbrains.kotlin.jvm' version '1.9.0'
 }
 
 dependencies {
